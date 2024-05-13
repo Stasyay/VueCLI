@@ -6,7 +6,7 @@
 export default {
   name: 'ArticleTagsComponent',
   props: {
-    tag_active: { type: Boolean, default: false },
+    article__tag_active: { type: Boolean, default: false },
     tags: { type: Object, default() {
         return { title: ''}
       } 
