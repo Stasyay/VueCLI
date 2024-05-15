@@ -1,22 +1,26 @@
 <template>
   <div id="app">
-    <HeaderComponent/>
-    <ArticleComponent/>
-    <FooterComponent/>
+    <HomePage/>
+    <BlogPage/>
+    <ArticlePage />
+    <ProdectPage/>
   </div>
 </template>
 
 <script>
-import HeaderComponent from './components/HeaderComponent.vue'
-import ArticleComponent from './components/ArticleComponent.vue'
-import FooterComponent from './components/FooterComponent.vue'
+import HomePage from './pages/HomePage.vue'
+import BlogPage from './pages/BlogPage.vue'
+import ArticlePage from './pages/ArticlePage.vue'
+import ProdectPage from './pages/ProdectPage.vue'
+
 
 export default {
   name: 'App',
   components: {
-    HeaderComponent,
-    ArticleComponent,
-    FooterComponent
+    HomePage,
+    BlogPage,
+    ArticlePage,
+    ProdectPage,  
   }
 }
 </script>
@@ -24,7 +28,7 @@ export default {
 <style lang="scss" scoped>
 #app {
   
-  * {
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
