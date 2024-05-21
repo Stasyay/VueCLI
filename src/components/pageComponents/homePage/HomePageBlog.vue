@@ -10,7 +10,7 @@
 
             <div class="blog__blog-items">
 
-                <div class="blog__blog-item" v-for="article in articles" :key="article.id">
+                <div class="blog__blog-item" v-for="article in articleData" :key="article.id">
                     <div class="blog__subcontent">
                         <div class="blog__blog-img-box">
                             <img class="blog__blog-item-img" :src="require('../../../assets/' + article.image)" alt="blog">
@@ -35,58 +35,13 @@
 </template>
 
 <script>
-export default {
-  name: 'HomePageBlog',
-  data() {
-    return {
-        // activeIndex: 0,
-        articles: [
-            {
-                id: 0,
-                title: 'Let’s Get Solution For Building Construction Work',
-                image: 'BlogImg1.png',
-                tag: 'Kitchen Design',
-                date: '26 December,2022'
-            },
-            {
-                id: 1,
-                title: 'Let’s Get Solution For Building Construction Work',
-                image: 'BlogImg2.png',
-                tag: 'Living Design',
-                date: '22 December,2022'
-            },
-            {
-                id: 2,
-                title: 'Let’s Get Solution For Building Construction Work',
-                image: 'BlogImg3.png',
-                tag: 'Kitchen Design',
-                date: '26 December,2022'
-            },
-            {
-                id: 3,
-                title: 'Let’s Get Solution For Building Construction Work',
-                image: 'BlogImg4.png',
-                tag: 'Kitchen Planning',
-                date: '26 December,2022'
-            },
-            {
-                id: 4,
-                title: 'Low Cost Latest Invented Interior Designing Ideas.',
-                image: 'BlogImg5.png',
-                tag: 'Living Design',
-                date: '22 December,2022'
-            },
-            {
-                id: 5,
-                title: 'Best For Any Office & Business Interior Solution',
-                image: 'BlogImg6.png',
-                tag: 'Interior Design',
-                date: '25 December,2022'
-            },
 
-        ],
-    }
-}  
+import { mapState } from 'vuex';
+export default {
+    name: 'HomePageBlog',
+    computed: {
+    ...mapState(['articleData']),
+    }, 
 };
 </script>
 

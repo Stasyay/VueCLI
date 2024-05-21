@@ -4,6 +4,7 @@
     <BlogPage/>
     <ArticlePage />
     <ProdectPage/>
+    <ProjectDetailsPage />
   </div>
 </template>
 
@@ -12,6 +13,7 @@ import HomePage from './pages/HomePage.vue'
 import BlogPage from './pages/BlogPage.vue'
 import ArticlePage from './pages/ArticlePage.vue'
 import ProdectPage from './pages/ProdectPage.vue'
+import ProjectDetailsPage from './pages/ProjectDetailsPage.vue'
 
 
 export default {
@@ -21,6 +23,7 @@ export default {
     BlogPage,
     ArticlePage,
     ProdectPage,  
+    ProjectDetailsPage
   }
 }
 </script>

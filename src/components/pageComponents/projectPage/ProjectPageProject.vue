@@ -9,7 +9,7 @@
                 </div>
             </div>
             <div class="project__box-items">
-                <div v-for="project in projects" :key="project.id" class="project__project-item">
+                <div v-for="project in projectData" :key="project.id" class="project__project-item">
                     <img class="project__project-img" :src="require('../../../assets/' + project.image)" alt="our project">
                     <div class="project__project-content">
                         <div>
@@ -35,60 +35,16 @@
 </template>
 
 <script>
+import { mapState } from 'vuex';
 import PaginationComponent from '../../../components/PaginationComponent.vue'
 export default {
   name: 'ProjectPageProject',
   components: {
     PaginationComponent
   },
-  data() {
-    return {
-        // activeIndex: 0,
-        projects: [
-            {
-                id: 0,
-                title: 'Minimal Bedroom',
-                image: 'Project1.png',                
-            },
-            {
-                id: 1,
-                title: 'Minimal Bedroom',
-                image: 'Project5.png',
-            },
-            {
-                id: 2,
-                title: 'Classic Minimal Bedroom',
-                image: 'Project2.png',
-            },
-            {
-                id: 3,
-                title: 'Modern Bedroom',
-                image: 'Project6.png',
-            },
-            {
-                id: 4,
-                title: 'Minimal Bedroom table',
-                image: 'Project3.png',
-            },
-            {
-                id: 5,
-                title: 'System Table',
-                image: 'Project7.png',
-            },
-            {
-                id: 6,                
-                title: 'Modern Medroom',
-                image: 'Project4.png',
-            },
-            {
-                id: 7,
-                title: 'Modern Bedroom',
-                image: 'Project8.png',
-            },
-
-        ],
-    }
-}
+  computed: {
+    ...mapState(['projectData']),
+    },
 }
 </script>
 

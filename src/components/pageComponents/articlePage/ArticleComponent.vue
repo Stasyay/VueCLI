@@ -33,8 +33,8 @@
 </template>
 
 <script>
-import ArticleTagsComponent from '../articlePage/ArticleTagsComponent.vue'
-
+import { mapState, mapGetters, mapActions  } from 'vuex';
+import ArticleTagsComponent from '@/components/pageComponents/articlePage/ArticleTagsComponent.vue'
 export default {
   name: 'ArticleComponent',
   components: {
@@ -43,73 +43,70 @@ export default {
 
   data() {
     return {
-        activeIndex: 0,
-        articles: [
-            {
-                id: 0,
-                title: 'Let’s Get Solution For Building Construction Work',
-                image: 'BlogImg1.png',
-                tag: 'Kitchen Design',
-                date: '26 December,2022'
-            },
-            {
-                id: 1,
-                title: 'Let’s Get Solution For Building Construction Work',
-                image: 'BlogImg2.png',
-                tag: 'Living Design',
-                date: '22 December,2022'
-            },
-            {
-                id: 2,
-                title: 'Let’s Get Solution For Building Construction Work',
-                image: 'BlogImg3.png',
-                tag: 'Kitchen Design',
-                date: '26 December,2022'
-            },
-            {
-                id: 3,
-                title: 'Let’s Get Solution For Building Construction Work',
-                image: 'BlogImg4.png',
-                tag: 'Kitchen Planning',
-                date: '26 December,2022'
-            },
-            {
-                id: 4,
-                title: 'Low Cost Latest Invented Interior Designing Ideas.',
-                image: 'BlogImg5.png',
-                tag: 'Living Design',
-                date: '22 December,2022'
-            },
-            {
-                id: 5,
-                title: 'Best For Any Office & Business Interior Solution',
-                image: 'BlogImg6.png',
-                tag: 'Interior Design',
-                date: '25 December,2022'
-            },
+        // activeIndex: 0,
+        // articles: [
+        //     {
+        //         id: 0,
+        //         title: 'Let’s Get Solution For Building Construction Work',
+        //         image: 'BlogImg1.png',
+        //         tag: 'Kitchen Design',
+        //         date: '26 December,2022'
+        //     },
+        //     {
+        //         id: 1,
+        //         title: 'Let’s Get Solution For Building Construction Work',
+        //         image: 'BlogImg2.png',
+        //         tag: 'Living Design',
+        //         date: '22 December,2022'
+        //     },
+        //     {
+        //         id: 2,
+        //         title: 'Let’s Get Solution For Building Construction Work',
+        //         image: 'BlogImg3.png',
+        //         tag: 'Kitchen Design',
+        //         date: '26 December,2022'
+        //     },
+        //     {
+        //         id: 3,
+        //         title: 'Let’s Get Solution For Building Construction Work',
+        //         image: 'BlogImg4.png',
+        //         tag: 'Kitchen Planning',
+        //         date: '26 December,2022'
+        //     },
+        //     {
+        //         id: 4,
+        //         title: 'Low Cost Latest Invented Interior Designing Ideas.',
+        //         image: 'BlogImg5.png',
+        //         tag: 'Living Design',
+        //         date: '22 December,2022'
+        //     },
+        //     {
+        //         id: 5,
+        //         title: 'Best For Any Office & Business Interior Solution',
+        //         image: 'BlogImg6.png',
+        //         tag: 'Interior Design',
+        //         date: '25 December,2022'
+        //     },
 
-        ],
-        tags: [
-            { title: 'Kitchen' },
-            { title: 'Bedroom' },
-            { title: 'Building' },
-            { title: 'Architecture' },
-            { title: 'Kitchen Planning' },
-            { title: 'Bedroom' }
-        ],
+        // ],
+        // tags: [
+        //     { title: 'Kitchen' },
+        //     { title: 'Bedroom' },
+        //     { title: 'Building' },
+        //     { title: 'Architecture' },
+        //     { title: 'Kitchen Planning' },
+        //     { title: 'Bedroom' }
+        // ],
     };
   },
 
   methods: {
-        selectTag(index) {
-            this.activeIndex = index;
-        }
+    ...mapActions(['setActiveIndex']),
     },
-    computed: {
-        filteredArticles() {
-            return this.articles.filter(article => article.tag.includes(this.tags[this.activeIndex].title))
-        }
-    }
+  computed: {
+        ...mapState(['articleData'],['tags'],'activeIndex'),
+        ...mapGetters(['filteredArticles']),
+  }
 };
 </script>
 

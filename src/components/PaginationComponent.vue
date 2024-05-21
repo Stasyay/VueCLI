@@ -64,7 +64,6 @@ export default {
         text-align: left;
         text-transform: capitalize;
         fill: rgb(54, 41, 45);
-        ;
     }
 
     &__pagination-link:hover &__pagination-svg .circle {
