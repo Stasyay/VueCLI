@@ -10,7 +10,7 @@
                         Lorem Ipsum is not simply random text. It has roots in a piece of classica. </p>
                     <div class="latest-blog__box-data">
                         <p class="latest-blog__post-data">26 December,2022 </p>
-                        <a href="article.html"> <svg width="52.000000" height="52.000000" viewBox="0 0 52 52"
+                        <router-link to="/Article"> <svg width="52.000000" height="52.000000" viewBox="0 0 52 52"
                                 fill="none" xmlns="http://www.w3.org/2000/svg"
                                 xmlns:xlink="http://www.w3.org/1999/xlink">
                                 <defs />
@@ -19,7 +19,7 @@
                                 <path id="Vector" d="M23.77 32.18L29.71 25.49L23.77 18.81" stroke="#292F36"
                                     stroke-opacity="1.000000" stroke-width="2.000000" stroke-linejoin="round"
                                     stroke-linecap="round" />
-                            </svg></a>
+                            </svg></router-link>
                     </div>
                 </article>
             </div>

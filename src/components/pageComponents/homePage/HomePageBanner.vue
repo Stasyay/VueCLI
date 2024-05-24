@@ -8,13 +8,13 @@
                     Be Unique</p>
                 <p class="banner__banner-text">There are many variations of the passages of
                     lorem Ipsum fromavailable, majority.</p>
-                <a class="banner__banner-btn" href="#">Get Started <svg width="18.000000" height="16.000000"
+                <router-link class="banner__banner-btn" to="/GetStarted">Get Started <svg width="18.000000" height="16.000000"
                         viewBox="0 -2 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"
                         xmlns:xlink="http://www.w3.org/1999/xlink">
                         <defs />
                         <path id="Vector" d="M1 7.43L14.72 7.29M9.61 0.91L16.14 7.43L9.48 14.08" stroke="#CDA274"
                             stroke-opacity="1.000000" stroke-width="2.000000" stroke-linejoin="round" />
-                    </svg></a>
+                    </svg></router-link>
             </div>
         </div>
 </template>

@@ -1,29 +1,21 @@
 <template>
   <div id="app">
-    <HomePage/>
+    <router-view />
+    <!-- <HomePage/>
     <BlogPage/>
     <ArticlePage />
     <ProdectPage/>
-    <ProjectDetailsPage />
+    <ProjectDetailsPage /> -->
   </div>
 </template>
 
 <script>
-import HomePage from './pages/HomePage.vue'
-import BlogPage from './pages/BlogPage.vue'
-import ArticlePage from './pages/ArticlePage.vue'
-import ProdectPage from './pages/ProdectPage.vue'
-import ProjectDetailsPage from './pages/ProjectDetailsPage.vue'
-
-
 export default {
   name: 'App',
   components: {
-    HomePage,
-    BlogPage,
-    ArticlePage,
-    ProdectPage,  
-    ProjectDetailsPage
+  },
+  created() {
+    this.$router.push({name: 'Home'})
   }
 }
 </script>

@@ -17,7 +17,7 @@
   import FooterComponent from '../components/FooterComponent.vue'
   
   export default {
-    name: 'BlogPage',
+    name: 'ProjectDetailsPage',
   
     components: {
           HeaderComponent,

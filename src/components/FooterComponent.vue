@@ -1,15 +1,15 @@
 <template>
     <footer class="footer center">
             <div class="footer__footer-left">
-                <a href="index.html"> <img class="footer__logo" src="../assets/Logo-1.png" alt="logo"></a>
+                <router-link to="/"> <img class="footer__logo" src="../assets/Logo-1.png" alt="logo"></router-link>
                 <p class="footer__footer-text">It is a long established fact that a reader will be distracted
                     lookings.</p>
             </div>
             <nav class="footer__footer-middle">
                 <h3 class="footer__footer-title">Pages</h3>
-                <a class="footer__footer-text" href="index.html">Home</a>
-                <a class="footer__footer-text" href="#">Project</a>
-                <a class="footer__footer-text" href="blog.html">Blog</a>
+                <router-link class="footer__footer-text" to="/">Home</router-link>
+                <router-link class="footer__footer-text" to="/Project">Project</router-link>
+                <router-link class="footer__footer-text" to="/Blog">Blog</router-link>
             </nav>
             <div class="footer__footer-right">
                 <h3 class="footer__footer-title">Contact</h3>

@@ -6,8 +6,8 @@
             <div class="banner-blog__banner-intro">
                 <h3 class="banner-blog__blog-title">Articles & News</h3>
                 <nav class="banner-blog__box-breadcrumbs">
-                    <a href="index.html" class="banner-blog__blog-breadcrumbs">Home / </a>
-                    <a href="blog.html" class="banner-blog__blog-breadcrumbs">Blog</a>
+                    <router-link class="banner-blog__blog-breadcrumbs" to="/">Home / </router-link>
+                    <router-link class="banner-blog__blog-breadcrumbs" to="/Blog">Blog</router-link>
                 </nav>
             </div>
         </div>
